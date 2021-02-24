@@ -55,6 +55,12 @@ namespace Assessment_1
         {
             Console.WriteLine($"{_name}\n{_votes}\n{String.Join(",",_seats)}\n\n");
         }
+
+        public void votesDivision()
+        {
+            //this hopefull divides each of the parties votes by the number of seats they have +1 each round
+            Math.Round(_votes /= (_seats.Count +1));
+        }
         
     }
 }

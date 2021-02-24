@@ -12,6 +12,7 @@ namespace Assessment_1
             List<Party> parties = new List<Party>();
             string contents = Assessment_1.Properties.Resources.Assessment1Data;
             string[] line = contents.Split("\n");
+            int seatsAvailable = int.Parse(line[1]);
             foreach (string element in line)
             {
                 if (char.IsLetter(element[0]) == true)
