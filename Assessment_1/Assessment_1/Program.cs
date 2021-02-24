@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Resources;
 
@@ -8,28 +9,24 @@ namespace Assessment_1
     {
         static void Main(string[] args)
         {
-            //StreamReader sr = new StreamReader("../../../Resources/Assessment1Data.txt");
-
-
-            string word = Assessment_1.Properties.Resources.Assessment1Data;
-            string[] words = word.Split("\n");
-            foreach (string a in words)
+            List<Party> parties = new List<Party>();
+            string contents = Assessment_1.Properties.Resources.Assessment1Data;
+            string[] line = contents.Split("\n");
+            foreach (string element in line)
             {
-                Console.WriteLine(a);
+                if (char.IsLetter(element[0]) == true)
+                {
+                    Console.WriteLine("hit");
+                    List<string> emptyList = new List<string> {};
+                    string number = element.Split(",")[1];
+                    Party placeHolder = new Party(element.Split(",")[0], int.Parse(number), emptyList);
+                    parties.Add(placeHolder);
+                }
             }
-            string x = Console.ReadLine();
-
-            //Console.WriteLine(sr.ReadToEnd());
-            //Console.WriteLine(lines);
-
-
-            //var assembly = Assembly.GetExecutingAssembly();
-            //var name = "Assessment_1.Properties.Resources.Assessment1Data.txt";
-            //using (Stream stream = assembly.GetManifestResourceStream(name))
-            //using (StreamReader reader = new StreamReader(stream))
-            //{
-            //    string lines = reader.ReadToEnd();
-            //}
+            foreach (Party element in parties)
+            {
+                element.status();
+            }
         }
     }
 }
