@@ -61,15 +61,6 @@ namespace Assessment_1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string Assessment1Data {
-            get {
-                return ResourceManager.GetString("Assessment1Data", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to #East Midlands (European Parliament Constituency)
         ///5
         ///1183227
@@ -83,18 +74,18 @@ namespace Assessment_1.Properties {
         ///Independent Network,7641,INET1,INET2,INET3,INET4,INET5;
         ///Independent,4511,IND1;.
         /// </summary>
-        internal static string Assessment1Data_txt {
+        internal static string Assessment1Data {
             get {
-                return ResourceManager.GetString("Assessment1Data_txt", resourceCulture);
+                return ResourceManager.GetString("Assessment1Data", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string Assessment1TestResults_txt {
+        internal static string Assessment1TestResults {
             get {
-                return ResourceManager.GetString("Assessment1TestResults_txt", resourceCulture);
+                return ResourceManager.GetString("Assessment1TestResults", resourceCulture);
             }
         }
     }

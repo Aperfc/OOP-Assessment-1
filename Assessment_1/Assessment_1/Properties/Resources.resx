@@ -117,14 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Assessment1Data" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Assessment1Data_txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resouces\Assessment1Data.txt.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="Assessment1Data" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resouces\assessment1data.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="Assessment1TestResults_txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resouces\Assessment1TestResults.txt.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="Assessment1TestResults" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resouces\assessment1testresults.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>
