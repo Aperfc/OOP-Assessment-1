@@ -81,7 +81,10 @@ namespace Assessment_1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to #East Midlands (European Parliament Constituency)
+        ///Brexit Party,BP1,BP2,BP3;
+        ///Liberal Democrats,LD1;
+        ///Labour,LAB1;.
         /// </summary>
         internal static string Assessment1TestResults {
             get {

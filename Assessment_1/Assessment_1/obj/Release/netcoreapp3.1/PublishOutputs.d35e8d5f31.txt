@@ -1,0 +1,5 @@
+E:\Downloads\Assessment_1.exe
+E:\Downloads\Assessment_1.dll
+E:\Downloads\Assessment_1.deps.json
+E:\Downloads\Assessment_1.runtimeconfig.json
+E:\Downloads\Assessment_1.pdb

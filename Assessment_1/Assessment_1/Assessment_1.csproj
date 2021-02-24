@@ -6,7 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Resouces\" />
+    <None Remove="Resouces\Assessment1Data.txt" />
+    <None Remove="Resouces\Assessment1TestResults.txt" />
+    <None Remove="Resources\Assessment1Data.txt" />
+    <None Remove="Resources\Assessment1TestResults.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Assessment1Data.txt" />
+    <EmbeddedResource Include="Resources\Assessment1TestResults.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resouces\Assessment1Data.txt" />
+    <Resource Include="Resouces\Assessment1TestResults.txt" />
   </ItemGroup>
 
   <ItemGroup>
