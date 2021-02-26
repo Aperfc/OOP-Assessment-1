@@ -18,7 +18,6 @@ namespace Assessment_1
             List<Party> parties = new List<Party>();
             string contents = Assessment_1.Properties.Resources.Assessment1Data;
             string[] line = contents.Split("\n");
-            List<float> votesList = new List<float>();
             int seatsAvailable = int.Parse(line[1]);
             foreach (string element in line)
             {
@@ -32,14 +31,15 @@ namespace Assessment_1
             }
             for (int i = 0; i < seatsAvailable; i++)
             {
+                List<double> votesList = new List<double>();
                 foreach (Party element in parties)
                 {
                     votesList.Add(element.votes);
                 }
-                float maxValue = votesList.Max();
+                double maxValue = votesList.Max();
                 int counter = 0;
                 int indexOfWinner = 5;
-                foreach (float element in votesList)
+                foreach (double element in votesList)
                 {
                     if(element == maxValue)
                     {
@@ -57,6 +57,7 @@ namespace Assessment_1
                     if(counter2 == indexOfWinner)
                     {
                         Console.WriteLine($"the winner is {element.name} with {element.votes} votes");
+                        element.addSeats();
                         break;
                     }
                     else
@@ -64,9 +65,12 @@ namespace Assessment_1
                         counter2++;
                     }
                 }
+
+                //this does nothing for now since the seats are not assigned yet meaning that there will be 
                 foreach (Party element in parties)
                 {
                     element.votesDivision();
+
                 }
             }
 

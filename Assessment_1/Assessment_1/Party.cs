@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
+// encountered a problem with converting double to float when doing the devision so i decided to make the seats and _seats attributes a double data type.
+// i think i resolved the LOGICAL ERROR i had (needed to empty the votes list in program.cs) which means i think that the double can be changed back to float
+// too lazy to do that now.
+
 namespace Assessment_1
 {
     class Party
     {
         private string _name;
-        private float _votes;
+        private double _votes;
         private List<string> _seats;
         public string name
         {
@@ -20,7 +24,7 @@ namespace Assessment_1
                 _name = value;
             }
         }
-        public float votes
+        public double votes
         {
             get
             {
@@ -59,7 +63,13 @@ namespace Assessment_1
         public void votesDivision()
         {
             //this hopefull divides each of the parties votes by the number of seats they have +1 each round
-            Math.Round(_votes /= (_seats.Count +1));
+            votes = Math.Round(_votes /= (_seats.Count +1));
+        }
+
+        // literally just adds 'seat<number> to the seats list. no proper name just yet.
+        public void addSeats()
+        {
+            seats.Add($"seat{(seats.Count)+1}");
         }
         
     }
