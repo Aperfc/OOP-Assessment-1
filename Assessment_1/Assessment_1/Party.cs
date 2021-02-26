@@ -13,6 +13,7 @@ namespace Assessment_1
         private string _name;
         private double _votes;
         private List<string> _seats;
+        private List<string> _possibleSeatNames;
         public string name
         {
             get
@@ -44,6 +45,17 @@ namespace Assessment_1
             set
             {
                 _seats = value;
+            }
+        }
+        public List<string> possibleSeatNames
+        {
+            get
+            {
+                return _possibleSeatNames;
+            }
+            set
+            {
+                _possibleSeatNames = value;
             }
         }
 
