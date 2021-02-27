@@ -89,10 +89,6 @@ namespace Assessment_1
                 foreach (Party element in parties)
                 {
                     element.votesDivision();        //another method is called to divide the votes each round. abstraction too.
-                    foreach (string a in element.seats)
-                    {
-                        Console.WriteLine(a);
-                    }
 
                 }
             }
