@@ -14,6 +14,7 @@ namespace Assessment_1
         private double _votes;
         private List<string> _seats;
         private List<string> _possibleSeatNames;
+        private double _originalVotes;
         public string name
         {
             get
@@ -58,13 +59,25 @@ namespace Assessment_1
                 _possibleSeatNames = value;
             }
         }
+        public double originalVotes
+        {
+            get
+            {
+                return _originalVotes;
+            }
+            set
+            {
+                _originalVotes = value;
+            }
+        }
 
-        public Party(string new_name, float new_votes, List<string> new_seats)
+        public Party(string new_name, double new_votes, List<string> new_seats)
         {
 
             name = new_name;
             votes = new_votes;
             seats = new_seats;
+            originalVotes = new_votes;
         }
 
         public void status()
@@ -75,7 +88,7 @@ namespace Assessment_1
         public void votesDivision()
         {
             //this hopefull divides each of the parties votes by the number of seats they have +1 each round
-            votes = Math.Round(_votes /= (_seats.Count +1));
+            votes = Math.Round(_originalVotes / (_seats.Count +1));
         }
 
         // literally just adds 'seat<number> to the seats list. no proper name just yet.
