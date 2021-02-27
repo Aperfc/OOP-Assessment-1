@@ -29,6 +29,7 @@ namespace Assessment_1
                     parties.Add(placeHolder);
                 }
             }
+               //loop for each round
             for (int i = 0; i < seatsAvailable; i++)
             {
                 List<double> votesList = new List<double>();
