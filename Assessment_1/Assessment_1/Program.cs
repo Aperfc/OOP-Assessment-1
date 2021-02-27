@@ -29,6 +29,24 @@ namespace Assessment_1
                     parties.Add(placeHolder);
                 }
             }
+
+            //adds the possible names to the party objects associate attribute. this allows the correct assigning of seat names.
+            int counter3 = 0;
+            foreach (string element in line)
+            {
+                if (char.IsLetter(element[0]) == true)
+                {
+                    string[] alist = element.Split(",");
+                    List<string> templist = new List<string>(alist);
+                    foreach (string item in templist.GetRange(2,templist.Count-2))
+                    {
+                        parties[counter3].possibleSeatNames.Add(item);
+                    }
+                    //Console.WriteLine(parties[counter3].possibleSeatNames.Count);
+                    counter3++;
+                }
+            }
+
                //loop for each round
             for (int i = 0; i < seatsAvailable; i++)
             {
@@ -71,6 +89,10 @@ namespace Assessment_1
                 foreach (Party element in parties)
                 {
                     element.votesDivision();        //another method is called to divide the votes each round. abstraction too.
+                    foreach (string a in element.seats)
+                    {
+                        Console.WriteLine(a);
+                    }
 
                 }
             }

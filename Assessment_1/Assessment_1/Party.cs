@@ -81,6 +81,7 @@ namespace Assessment_1
             votes = new_votes;
             seats = new_seats;
             originalVotes = new_votes;  //this is orginal votes which should nto be changed at all. do not know how to make this into a constant.
+            possibleSeatNames = new List<string> { };
         }
 
         // a method which just write to the console who has won the round (testing purposes)
@@ -99,7 +100,7 @@ namespace Assessment_1
         // literally just adds 'seat<number> to the seats list. no proper name just yet.
         public void addSeats()
         {
-            seats.Add($"seat{(seats.Count)+1}");
+            seats.Add(possibleSeatNames[seats.Count]);
         }
         
     }
