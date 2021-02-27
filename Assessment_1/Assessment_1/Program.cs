@@ -15,7 +15,7 @@ namespace Assessment_1
     {
         static void Main(string[] args)
         {
-            List<Party> parties = new List<Party>();    // creates a list will the data type of our custom object 'Party'
+            List<Party> parties = new List<Party>();    // creates a list with the data type of our custom object 'Party'
             string contents = Assessment_1.Properties.Resources.Assessment1Data;
             string[] line = contents.Split("\n");
             int seatsAvailable = int.Parse(line[1]);
@@ -53,16 +53,16 @@ namespace Assessment_1
                 List<double> votesList = new List<double>();
                 foreach (Party element in parties)
                 {
-                    votesList.Add(element.votes);       //adds the instances votes into a list. teh votes are achieved through a public getter.
+                    votesList.Add(element.votes);       //adds the instances votes into a list. the votes are achieved through a public getter.
                 }
-                double maxValue = votesList.Max();      //find which value is teh largest in the list or finds what the largest votes number is
+                double maxValue = votesList.Max();      //find which value is the largest in the list or finds what the largest votes number is
                 int counter = 0;
                 int indexOfWinner = 5;
                 foreach (double element in votesList)
                 {
                     if(element == maxValue)
                     {
-                        indexOfWinner = counter;        //loops through the list of votes and when an Party's votes is the same as the maximum then an incremented counter is set as the index value of teh winner from. which will be used to select the winner from the parties list
+                        indexOfWinner = counter;        //loops through the list of votes and when a party's votes is the same as the maximum then an incremented counter is set as the index value of the winner from. which will be used to select the winner from the parties list
                         break;
                     }
                     else
@@ -76,7 +76,7 @@ namespace Assessment_1
                     if(counter2 == indexOfWinner)
                     {
                         Console.WriteLine($"the winner is {element.name} with {element.votes} votes");
-                        element.addSeats();     //when the index location matches with the counter in a loop that goes over teh parties list; the winner is found. when thsi happens a method is called. This is a form of ABSTRACTION as the details of the method are hidden, all that the programmers need to know after writing the method is how to use it, the code is then abstracted. this method adds a set to oen of the objects attributes
+                        element.addSeats();     //when the index location matches with the counter in a loop that goes over the parties list; the winner is found. when this happens a method is called. This is a form of ABSTRACTION as the details of the method are hidden, all that the programmers need to know after writing the method is how to use it, the code is then abstracted. this method adds a set to one of the objects attributes
                         break;
                     }
                     else

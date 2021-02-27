@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Documents\\university of lincoln\\Computer Science\\Semester B\\Object Orientated Programming\\Assessment 1\\repository\\OOP-Assessment-1\\Assessment_1\\Assessment_1\\Assessment_1.csproj": {}
+    "C:\\Users\\jackr\\Documents\\GitHub\\OOP-Assessment-1\\Assessment_1\\Assessment_1\\Assessment_1.csproj": {}
   },
   "projects": {
-    "E:\\Documents\\university of lincoln\\Computer Science\\Semester B\\Object Orientated Programming\\Assessment 1\\repository\\OOP-Assessment-1\\Assessment_1\\Assessment_1\\Assessment_1.csproj": {
+    "C:\\Users\\jackr\\Documents\\GitHub\\OOP-Assessment-1\\Assessment_1\\Assessment_1\\Assessment_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Documents\\university of lincoln\\Computer Science\\Semester B\\Object Orientated Programming\\Assessment 1\\repository\\OOP-Assessment-1\\Assessment_1\\Assessment_1\\Assessment_1.csproj",
+        "projectUniqueName": "C:\\Users\\jackr\\Documents\\GitHub\\OOP-Assessment-1\\Assessment_1\\Assessment_1\\Assessment_1.csproj",
         "projectName": "Assessment_1",
-        "projectPath": "E:\\Documents\\university of lincoln\\Computer Science\\Semester B\\Object Orientated Programming\\Assessment 1\\repository\\OOP-Assessment-1\\Assessment_1\\Assessment_1\\Assessment_1.csproj",
-        "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
-        "outputPath": "E:\\Documents\\university of lincoln\\Computer Science\\Semester B\\Object Orientated Programming\\Assessment 1\\repository\\OOP-Assessment-1\\Assessment_1\\Assessment_1\\obj\\",
+        "projectPath": "C:\\Users\\jackr\\Documents\\GitHub\\OOP-Assessment-1\\Assessment_1\\Assessment_1\\Assessment_1.csproj",
+        "packagesPath": "C:\\Users\\jackr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jackr\\Documents\\GitHub\\OOP-Assessment-1\\Assessment_1\\Assessment_1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jackr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
