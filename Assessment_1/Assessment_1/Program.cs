@@ -93,6 +93,43 @@ namespace Assessment_1
                 }
             }
 
+            //the code below will write the details of the winners into an output file.
+            try
+            {
+                string path = Directory.GetCurrentDirectory() + @"\output\";
+                if (File.Exists(path) == false)
+                {
+                    Directory.CreateDirectory(path);
+                    StreamWriter sw = File.CreateText(path + @"output.txt");
+                    sw.Close();
+                }
+                using (StreamWriter sw = new StreamWriter(path + @"output.txt"))
+                {
+                    sw.Write(line[0]);
+                    foreach(Party element in parties)
+                    {
+                        if (element.getSeatCount() > 0)
+                        {
+                            string entry = element.name + ",";
+                            foreach (string item in element.seats)
+                            {
+                                entry += item;
+                                if (item == element.seats[element.seats.Count-1])
+                                    entry += ";";
+                                else
+                                    entry += ",";
+                            }
+                            sw.WriteLine(entry);
+                        }
+                    }
+                    sw.Close();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

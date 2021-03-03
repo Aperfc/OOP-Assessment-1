@@ -102,6 +102,10 @@ namespace Assessment_1
         {
             seats.Add(possibleSeatNames[seats.Count]);
         }
+        public int getSeatCount()
+        {
+            return this._seats.Count;
+        }
         
     }
 }
