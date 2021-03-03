@@ -96,26 +96,26 @@ namespace Assessment_1
             //the code below will write the details of the winners into an output file.
             try
             {
-                string path = Directory.GetCurrentDirectory() + @"\output\";
-                if (File.Exists(path) == false)
+                string path = Directory.GetCurrentDirectory() + @"\output\";        //the directory path i want to place the output text in. the current directory the exe is running from + one directory deeper.
+                if (File.Exists(path) == false)         //checks if the fodler is created/there or not
                 {
                     Directory.CreateDirectory(path);
-                    StreamWriter sw = File.CreateText(path + @"output.txt");
+                    StreamWriter sw = File.CreateText(path + @"output.txt");        //creates both additional directory and txt file.
                     sw.Close();
                 }
-                using (StreamWriter sw = new StreamWriter(path + @"output.txt"))
+                using (StreamWriter sw = new StreamWriter(path + @"output.txt"))        //code below is the logic and action of writing to the file by opening it up
                 {
-                    sw.Write(line[0]);
-                    foreach(Party element in parties)
+                    sw.Write(line[0]);      
+                    foreach(Party element in parties)       //adds the title then loops over the parties
                     {
-                        if (element.getSeatCount() > 0)
+                        if (element.getSeatCount() > 0)     //only writes parties that have at least one win/seat
                         {
                             string entry = element.name + ",";
-                            foreach (string item in element.seats)
+                            foreach (string item in element.seats)      //writes the party's name then loops over the party's seats to be added to a string.
                             {
                                 entry += item;
-                                if (item == element.seats[element.seats.Count-1])
-                                    entry += ";";
+                                if (item == element.seats[element.seats.Count - 1])
+                                    entry += ";";  
                                 else
                                     entry += ",";
                             }
@@ -128,7 +128,7 @@ namespace Assessment_1
             catch (Exception)
             {
 
-                throw;
+                Console.WriteLine("ERROR!");
             }
         }
     }
