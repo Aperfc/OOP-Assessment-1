@@ -11,11 +11,11 @@ namespace Assessment_1
     class Party
     {
         //attributes of the object
-        private string _name;
-        private double _votes;
-        private List<string> _seats;
-        private List<string> _possibleSeatNames;
-        private double _originalVotes;
+        private string _name;       //name of the party
+        private double _votes;      //number of votes teh party has, this number changes with division after each round
+        private List<string> _seats;        //the seast that the party has won
+        private List<string> _possibleSeatNames;        //the possible names that the seats could have eg bp1,bp2,bp3,bp4,bp5
+        private double _originalVotes;      //the original number of votes that the party was givin in the input file. does not change.
         //getters and setters for the encapsulated(private attributes)
         public string name
         {
@@ -100,7 +100,16 @@ namespace Assessment_1
         // adds 'seat<number>' to the seats list. no proper name just yet.
         public void addSeats()
         {
-            seats.Add(possibleSeatNames[seats.Count]);
+            try
+            {
+                seats.Add(possibleSeatNames[seats.Count]);
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("out of range, could not add");
+            }
+            
         }
         public int getSeatCount()
         {

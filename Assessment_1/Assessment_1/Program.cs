@@ -115,14 +115,14 @@ namespace Assessment_1
                             {
                                 entry += item;
                                 if (item == element.seats[element.seats.Count - 1])
-                                    entry += ";";  
+                                    entry += ";";       //last case scdenario where its the last seat and will add a semi colon.
                                 else
                                     entry += ",";
                             }
-                            sw.WriteLine(entry);
+                            sw.WriteLine(entry);        //writes the entry to the file.
                         }
                     }
-                    sw.Close();
+                    sw.Close();     //closes file after use.
                 }
             }
             catch (Exception)
