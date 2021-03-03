@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Resources;
 using System.Linq;
-//COMMENT TO TEST COLABORATIVE WORK
 
 /*what need to be done now is divide the votes,
  * add a method to the class to assign seats with appriopriate names
@@ -16,16 +15,16 @@ namespace Assessment_1
         static void Main(string[] args)
         {
             List<Party> parties = new List<Party>();    // creates a list with the data type of our custom object 'Party'
-            string contents = Assessment_1.Properties.Resources.Assessment1Data;
-            string[] line = contents.Split("\n");
-            int seatsAvailable = int.Parse(line[1]);
+            string contents = Assessment_1.Properties.Resources.Assessment1Data; // getting file data into a variable
+            string[] line = contents.Split("\n"); // splitting each line of the file data
+            int seatsAvailable = int.Parse(line[1]); // getting seats to be won (rounds) from the file data
             foreach (string element in line)
             {
                 if (char.IsLetter(element[0]) == true)
                 {
                     List<string> emptyList = new List<string> {};
                     string number = element.Split(",")[1];
-                    Party placeHolder = new Party(element.Split(",")[0], int.Parse(number), emptyList);     //creats a new instance of the class each time the loop is run, setting the different values
+                    Party placeHolder = new Party(element.Split(",")[0], int.Parse(number), emptyList);     //creats a new instance of the class (an object) each time the loop is run, setting specific values for each party
                     parties.Add(placeHolder);
                 }
             }
@@ -53,7 +52,7 @@ namespace Assessment_1
                 List<double> votesList = new List<double>();
                 foreach (Party element in parties)
                 {
-                    votesList.Add(element.votes);       //adds the instances votes into a list. the votes are achieved through a public getter.
+                    votesList.Add(element.votes);       //adds the instances votes into a list. the votes are retrieved through a public getter.
                 }
                 double maxValue = votesList.Max();      //find which value is the largest in the list or finds what the largest votes number is
                 int counter = 0;
@@ -61,7 +60,7 @@ namespace Assessment_1
                 foreach (double element in votesList)
                 {
                     if(element == maxValue)
-                    {
+                    {                                   //finding which party won the vote
                         indexOfWinner = counter;        //loops through the list of votes and when a party's votes is the same as the maximum then an incremented counter is set as the index value of the winner from. which will be used to select the winner from the parties list
                         break;
                     }
@@ -115,7 +114,7 @@ namespace Assessment_1
                             {
                                 entry += item;
                                 if (item == element.seats[element.seats.Count - 1])
-                                    entry += ";";       //last case scdenario where its the last seat and will add a semi colon.
+                                    entry += ";";       //last case scenario where its the last seat and will add a semi colon.
                                 else
                                     entry += ",";
                             }
@@ -125,7 +124,7 @@ namespace Assessment_1
                     sw.Close();     //closes file after use.
                 }
             }
-            catch (Exception)
+            catch (Exception) //error handing so the program still runs in case of an error
             {
 
                 Console.WriteLine("ERROR!");

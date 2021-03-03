@@ -12,65 +12,35 @@ namespace Assessment_1
     {
         //attributes of the object
         private string _name;       //name of the party
-        private double _votes;      //number of votes teh party has, this number changes with division after each round
-        private List<string> _seats;        //the seast that the party has won
+        private double _votes;      //number of votes the party has, this number changes if the party wins the round
+        private List<string> _seats;        //the list of seats that the party has won
         private List<string> _possibleSeatNames;        //the possible names that the seats could have eg bp1,bp2,bp3,bp4,bp5
         private double _originalVotes;      //the original number of votes that the party was givin in the input file. does not change.
         //getters and setters for the encapsulated(private attributes)
         public string name
         {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
+            get {return _name;}
+            set { _name = value; }
         }
         public double votes
         {
-            get
-            {
-                return _votes;
-            }
-            set
-            {
-                _votes = value;
-            }
+            get { return _votes; }
+            set { _votes = value; }
         }
         public List<string> seats
         {
-            get
-            {
-                return _seats;
-            }
-            set
-            {
-                _seats = value;
-            }
+            get { return _seats; }
+            set { _seats = value; }
         }
         public List<string> possibleSeatNames
         {
-            get
-            {
-                return _possibleSeatNames;
-            }
-            set
-            {
-                _possibleSeatNames = value;
-            }
+            get { return _possibleSeatNames; }
+            set { _possibleSeatNames = value; }
         }
         public double originalVotes
         {
-            get
-            {
-                return _originalVotes;
-            }
-            set
-            {
-                _originalVotes = value;
-            }
+            get { return _originalVotes; }
+            set { _originalVotes = value; }
         }
 
         // a constructor to initialize a new instance of the class
