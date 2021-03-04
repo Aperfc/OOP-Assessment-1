@@ -58,11 +58,12 @@ namespace Assessment_1
             if (!Directory.Exists(path))         //checks if the fodler is created/there or not
             {
                 Directory.CreateDirectory(path);   //creates both additional directory and txt file.
-                File.CreateText(path + @"output.txt");        //creates both additional directory and txt file.
+                StreamWriter sw =  File.CreateText(path + @"output.txt");        //creates both additional directory and txt file.
+                sw.Close();
             }
             using (StreamWriter sw = new StreamWriter(path + @"output.txt"))
             {
-                sw.WriteLine(lines[0]); //The title read in from the vote data
+                sw.Write(lines[0]); //The title read in from the vote data
                 foreach (Party party in parties)
                 {
                     if (party.seats.Count() > 0)
